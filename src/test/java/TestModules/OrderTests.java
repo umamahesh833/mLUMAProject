@@ -38,6 +38,17 @@ public class OrderTests {
 		
 	}
 	
+	@Test
+	public void TstValidatePrice() throws Exception {
+		
+		ApplicationMethods ObjAppMeth = new ApplicationMethods();
+		ObjAppMeth.fnLaunchApp();
+		ObjAppMeth.fnLoginToApp();
+		ObjAppMeth.fnNavigateToOrdersPage();
+		ObjAppMeth.fnCloseApp();
+		
+	}
+	
 	
 
 }
