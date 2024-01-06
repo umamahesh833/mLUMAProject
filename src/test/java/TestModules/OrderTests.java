@@ -14,7 +14,7 @@ import Utility.ApplicationMethods;
 
 public class OrderTests {
 	
-	
+	//Test PUsh from Orders class
 	@Test
 	public void TstOrderNumberValidation() throws Exception {
 		
