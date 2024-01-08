@@ -20,7 +20,7 @@ public class OrderTests {
 		
 		ApplicationMethods ObjAppMeth = new ApplicationMethods();
 		ObjAppMeth.fnLaunchApp();
-		ObjAppMeth.fnLoginToApp();
+		ObjAppMeth.fnLoginToApp("uamamehsh833@gald", "ABscdvcd@12223");
 		ObjAppMeth.fnNavigateToOrdersPage();
 		ObjAppMeth.fnValidateOrder();
 		ObjAppMeth.fnCloseApp();

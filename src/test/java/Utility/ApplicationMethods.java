@@ -29,6 +29,7 @@ public class ApplicationMethods {
 		Driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	}
 	
+	
 	public void fnLoginToApp() throws Exception {
 
 		Driver.findElement(By.linkText("Sign In")).click();
@@ -36,6 +37,16 @@ public class ApplicationMethods {
 		//Enter username and password and click on login
 		Driver.findElement(By.cssSelector("#email")).sendKeys("TestlTestF@gmail.com");
 		Driver.findElement(By.xpath("(//input[@id='pass'])[1]")).sendKeys("Testing123");
+		Driver.findElement(By.xpath("(//button[@id='send2'])[1]")).click();
+	}
+	//Method Overriding
+	public void fnLoginToApp(String Usrname, String passwd) throws Exception {
+
+		Driver.findElement(By.linkText("Sign In")).click();
+		Thread.sleep(2000);
+		//Enter username and password and click on login
+		Driver.findElement(By.cssSelector("#email")).sendKeys(Usrname);
+		Driver.findElement(By.xpath("(//input[@id='pass'])[1]")).sendKeys(passwd);
 		Driver.findElement(By.xpath("(//button[@id='send2'])[1]")).click();
 	}
 	
