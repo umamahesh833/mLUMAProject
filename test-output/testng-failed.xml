@@ -3,11 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestModules.OrderTests">
+      <class name="MainTests.ModuleOneTests">
         <methods>
-          <include name="TstOrderNumberValidation"/>
+          <include name="HomePageValidation"/>
+          <include name="LaunchApp"/>
         </methods>
-      </class> <!-- TestModules.OrderTests -->
+      </class> <!-- MainTests.ModuleOneTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
