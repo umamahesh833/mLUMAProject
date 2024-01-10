@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 
 public class ApplicationMethods {
 	
@@ -20,6 +21,8 @@ public class ApplicationMethods {
 		//String EdgeDriverPath = "C:\\Selenium2023\\BrowserDrivers\\edgedriver_win64\\msedgedriver.exe";
 		//System.setProperty("webdriver.edge.driver", EdgeDriverPath);
 		//WebDriver Driver = new EdgeDriver();
+		
+		
 		Driver.manage().window().maximize();
 		Driver.get("https://magento.softwaretestingboard.com/");
 		//Page load time - selenium method
@@ -88,11 +91,12 @@ public class ApplicationMethods {
 		String OptTitle = Driver.getTitle();
 		System.out.println(OptTitle);
 		
-		if(OptTitle.equals("Home Page")) {
-			System.out.println("Test case is - PASS");
-		}else {
-			System.out.println("Test case is - FAIL");
-		}
+		Assert.assertEquals(OptTitle, "Home Pagexxx");
+		
+		Assert.assertTrue(false, "Message");
+		Assert.assertFalse(false, "Message");
+		
+
 	}
 	
 	

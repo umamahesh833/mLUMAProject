@@ -11,18 +11,21 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import Utility.ApplicationMethods;
 
 public class OrderTests {
 	
+
+
+	
 	//Test PUsh from Orders class
 	@Test
 	public void TstOrderNumberValidation() throws Exception {
 		//Getting data from COnfig.Properties file
 		String localDir = System.getProperty("user.dir");
-		
 		Properties ObjProp = new Properties();
 		InputStream input = new FileInputStream(localDir+"\\config.properties");
 		ObjProp.load(input);
@@ -32,6 +35,8 @@ public class OrderTests {
 		System.out.println(username);
 		
 		ApplicationMethods ObjAppMeth = new ApplicationMethods();
+
+		
 		ObjAppMeth.fnLaunchApp();
 		ObjAppMeth.fnLoginToApp(username, pwd);
 		ObjAppMeth.fnNavigateToOrdersPage();
@@ -44,8 +49,10 @@ public class OrderTests {
 	public void TstViewOrder() throws Exception {
 		
 		ApplicationMethods ObjAppMeth = new ApplicationMethods();
+
 		ObjAppMeth.fnLaunchApp();
 		ObjAppMeth.fnLoginToApp();
+
 		ObjAppMeth.fnNavigateToOrdersPage();
 		ObjAppMeth.fnCloseApp();
 		
